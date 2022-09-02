@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+.borde-neon {
+    box-shadow: 0 0 5px #ea4015, 0 0 15px #ea4015, 0 0 30px #ea4015;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
