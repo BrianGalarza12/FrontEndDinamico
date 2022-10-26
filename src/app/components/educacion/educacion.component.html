@@ -1,26 +1,46 @@
-<div class="container" id="educacion">
-    <div class="row text-white  borde-neon mt-4">
-        <div class="col-12 text-center ">
-            <h2 class="neon3">Educacion</h2>
-        </div>
-        <div class="col-12 mt-3">
-            <ul>
-                <li>
-                    <h3>Educacion 1</h3> 
-                    <p class="año"> ((years)) </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, id? Eum possimus ut fugit cum iusto amet distinctio blanditiis, magni inventore consequatur non est ab. Fugit doloremque voluptate reiciendis quia?</p>
-                </li>
-                <li>
-                    <h3>Educacion 2</h3> 
-                    <p class="año"> ((years)) </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, id? Eum possimus ut fugit cum iusto amet distinctio blanditiis, magni inventore consequatur non est ab. Fugit doloremque voluptate reiciendis quia?</p>
-                </li>
-                <li>
-                    <h3>Educacion 3</h3> 
-                    <p class="año"> ((years)) </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, id? Eum possimus ut fugit cum iusto amet distinctio blanditiis, magni inventore consequatur non est ab. Fugit doloremque voluptate reiciendis quia?</p>
-                </li>
-            </ul>
-        </div>
+<div class="container" id="experiencia">
+  <div class="row text-white borde-neon mt-4">
+    <div class="col-12 text-center">
+      <h2 class="neon3">Educación</h2>
     </div>
+    <div class="col-12">
+      <table class="table text-white">
+        <thead>
+          <tr class="">
+            <th>Nombre de la Institución</th>
+            <th>Descripcion de la carrera</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Educacion of educacion" class="">
+            <td>{{ Educacion.nombreE }}</td>
+            <td>{{ Educacion.descripcionE }}</td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn btn-warning"
+                routerLink="/editedu/{{ Educacion.id }}"
+              >
+                <i class="fa-sharp fa-solid fa-pen-to-square"></i> Editar
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                <i class="fa-sharp fa-solid fa-trash"></i> Borrar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 m-2 text-end">
+      <button
+        type="button"
+        class="btn btn-success"
+        routerLink="/nuevaedu"
+        *ngIf="isLogged"
+      >
+        Nueva Educación
+      </button>
+    </div>
+  </div>
 </div>
