@@ -19,14 +19,16 @@
             <label for="descripcionE" class="text-white"
               >Descripcion del puesto</label
             >
-            <input
+            <!-- <input
               type="text"
               class="form-control"
               id="descripcionE"
               name="descripcionE"
               [(ngModel)]="descripcionE"
               required
-            />
+            /> -->
+            <textarea class="form-control" name="descripcionE" id="descripcionE" cols="30" rows="10" [(ngModel)]="descripcionE"
+            required></textarea>
           </div>
         </fieldset>
         <button class="btn btn-success mt-3">Agregar experiencia</button>
