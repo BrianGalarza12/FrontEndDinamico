@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 col-lg-8">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <fieldset>
+            <legend>Agregar nueva Skill</legend>
+            <div class="form-group">
+              <label for="Nombre" class="text-white">Nombre de la Skill</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Nombre"
+                name="Nombre"
+                [(ngModel)]="nombre"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="porcentaje" class="text-white"
+                >porcentaje de habilidad</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="porcentaje"
+                name="porcentaje"
+                [(ngModel)]="porcentaje"
+                required
+              />
+            </div>
+          </fieldset>
+          <button class="btn btn-success mt-3">Agregar Skill</button>
+        </form>
+      </div>
+    </div>
+  </div>

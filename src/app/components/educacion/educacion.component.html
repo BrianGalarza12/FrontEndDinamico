@@ -18,29 +18,21 @@
             <td *ngIf="isLogged">
               <button
                 class="btn btn-warning"
-                routerLink="/editedu/{{ Educacion.id }}"
-              >
-                <i class="fa-sharp fa-solid fa-pen-to-square"></i> Editar
+                routerLink="/editedu/{{ Educacion.id }}">
+                <i class="fa-sharp fa-solid fa-pen-to-square"></i>
               </button>
             </td>
             <td *ngIf="isLogged">
               <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                <i class="fa-sharp fa-solid fa-trash"></i> Borrar
+                <i class="fa-sharp fa-solid fa-trash"></i>
               </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="col-12 m-2 text-end">
-      <button
-        type="button"
-        class="btn btn-success"
-        routerLink="/nuevaedu"
-        *ngIf="isLogged"
-      >
-        Nueva Educación
-      </button>
+    <div class="col-12 m-2 text-center">
+      <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged" > Nueva Educación </button>
     </div>
   </div>
 </div>

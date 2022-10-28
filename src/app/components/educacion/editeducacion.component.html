@@ -1,7 +1,11 @@
-<div class="container" *ngIf="educacion">
-    <div class="row">
-      <div class="col-6">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="container " *ngIf="educacion">
+  <div class="row vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-lg-8">
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <fieldset>
+          <legend class="text-white">
+              Actualizar educacion
+          </legend>
           <div class="form-group">
             <label for="nombreE" class="text-white">Nombre de la institución</label>
             <input
@@ -15,17 +19,20 @@
           </div>
           <div class="form-group">
             <label for="descripcionE" class="text-white">Descripcion del curso</label>
-            <input
+            <!-- <input
               type="text"
               class="form-control"
               id="descripcionE"
               name="descripcionE"
               [(ngModel)]="educacion.descripcionE"
               required
-            />
+            /> -->
+            <textarea class="form-control" name="descripcionE" id="descripcionE" cols="30" rows="10"  [(ngModel)]="educacion.descripcionE"
+            required></textarea>
           </div>
-          <button class="btn btn-success">Actualizar educación</button>
-        </form>
-      </div>
+        </fieldset>
+        <button class="btn btn-success mt-3">Actualizar educación</button>
+      </form>
     </div>
   </div>
+</div>
