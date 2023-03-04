@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 
-  expURL = "https://backendbrian.herokuapp.com/explab/"
+  expURL = "https://backend2brian.onrender.com/explab/"
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Experiencia[]>{

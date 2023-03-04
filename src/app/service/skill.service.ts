@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'https://backendbrian.herokuapp.com/skill/';
+  URL = 'https://backend2brian.onrender.com/skill/';
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{
